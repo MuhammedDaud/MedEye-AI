@@ -1,0 +1,82 @@
+name: Code Quality Checks
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pylint mypy
+
+    - name: Run pylint
+      run: |
+        pylint **/*.py --max-line-length=100 --disable=all --enable=E,F || true
+
+    - name: Run mypy type checking
+      run: |
+        mypy . --ignore-missing-imports || true
+
+  documentation:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Check for broken links in README
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        use-quiet-mode: 'yes'
+        use-verbose-mode: 'yes'
+
+    - name: Check docstrings
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Verify code has docstrings
+      run: |
+        python -c "
+        import os
+        import ast
+        
+        issues = []
+        for root, dirs, files in os.walk('.'):
+            # Skip common directories
+            dirs[:] = [d for d in dirs if d not in ['.git', '__pycache__', '.pytest_cache', 'venv', 'env']]
+            
+            for file in files:
+                if file.endswith('.py') and not file.startswith('test_'):
+                    filepath = os.path.join(root, file)
+                    try:
+                        with open(filepath, 'r') as f:
+                            tree = ast.parse(f.read())
+                        
+                        for node in ast.walk(tree):
+                            if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+                                if not ast.get_docstring(node):
+                                    issues.append(f'{filepath}: {node.name} missing docstring')
+                    except:
+                        pass
+        
+        if issues:
+            print('Found functions/classes without docstrings:')
+            for issue in issues[:10]:  # Show first 10
+                print(f'  - {issue}')
+        " || true

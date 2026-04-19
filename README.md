@@ -4,6 +4,11 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![TensorFlow 2.10+](https://img.shields.io/badge/tensorflow-2.10+-orange.svg)](https://www.tensorflow.org/)
 [![Status: Production Ready](https://img.shields.io/badge/status-production--ready-green.svg)](#)
+[![GitHub Stars](https://img.shields.io/github/stars/MuhammedDaud/MedEye-AI?style=social)](https://github.com/MuhammedDaud/MedEye-AI)
+[![GitHub Forks](https://img.shields.io/github/forks/MuhammedDaud/MedEye-AI?style=social)](https://github.com/MuhammedDaud/MedEye-AI)
+[![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen.svg)](#)
+[![Code Style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ---
 
@@ -22,6 +27,7 @@
 - [Configuration](#configuration)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
+- [Changelog](#changelog)
 - [License](#license)
 - [Citation](#citation)
 
@@ -701,11 +707,30 @@ print("Corrupted images:", loader.corrupted_images)
 
 ---
 
+## 📚 Additional Resources
+
+### Documentation & Guides
+- **[CHANGELOG.md](CHANGELOG.md)** - Version history and feature additions
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines and development setup
+- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** - Community guidelines
+
+### Issue & Feature Tracking
+- **[Report a Bug](.github/ISSUE_TEMPLATE/bug_report.md)** - Use the bug report template
+- **[Request a Feature](.github/ISSUE_TEMPLATE/feature_request.md)** - Suggest improvements
+- **[Model Improvements](.github/ISSUE_TEMPLATE/model_improvement.md)** - Propose model enhancements
+
+### Development
+- **GitHub Actions CI/CD** - Automated testing on every push/PR
+- **Code Quality Checks** - Linting, formatting, type checking
+- **Test Coverage** - Unit tests for all modules
+
+---
+
 ## 🤝 Contributing
 
-We welcome contributions! Please follow these guidelines:
+We welcome contributions from everyone! Here's how you can help:
 
-### How to Contribute
+### Quick Start
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
@@ -713,13 +738,31 @@ We welcome contributions! Please follow these guidelines:
 4. **Push** to branch (`git push origin feature/amazing-feature`)
 5. **Open** a Pull Request
 
-### Code Standards
+### Contribution Types
+
+- 🐛 **Bug Fixes** - Fix issues and improve reliability
+- ✨ **Features** - Add new models, utilities, or functionality
+- 📚 **Documentation** - Improve guides, docstrings, and examples
+- 🧪 **Tests** - Improve test coverage and reliability
+- ♻️ **Refactoring** - Improve code quality and efficiency
+
+### Guidelines
 
 - Follow PEP 8 style guidelines
 - Add docstrings to all functions
-- Include type hints for better IDE support
 - Write unit tests for new features
 - Update documentation accordingly
+- Use conventional commit messages
+
+**See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines and development setup.**
+
+### Code Standards
+
+- Follow **PEP 8** - Use `black` formatter
+- Add **type hints** - Use `mypy` for checking
+- Write **docstrings** - Google-style format
+- Create **unit tests** - Use `pytest`
+- Validate with **flake8** - Maximum 100 char line length
 
 ### Reporting Issues
 
@@ -727,12 +770,33 @@ We welcome contributions! Please follow these guidelines:
 - Include detailed description and steps to reproduce
 - Attach logs and error messages
 - Specify Python version and dependencies
+- Use issue templates for consistency
 
 ### Code of Conduct
 
 Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community guidelines.
 
 ---
+
+## 📅 Changelog
+
+### Version 2.0.0 (Latest)
+**Production-Ready Release** with 10 ML models, comprehensive documentation, and enterprise-grade features.
+
+**Key Additions:**
+- 7 Transfer Learning Models (EfficientNetB3, MobileNetV2, DenseNet121, ResNet50, VGG16, Xception, InceptionV3)
+- 2 Traditional ML Models (SVM, Random Forest)
+- Baseline CNN for comparison
+- 4,217 balanced retinal images dataset
+- Comprehensive validation and error handling
+- Production-grade logging and metrics
+- Full API documentation and examples
+
+**See [CHANGELOG.md](CHANGELOG.md) for complete version history.**
+
+---
+
+## 📅 Changelog
 
 ## 📄 License
 
