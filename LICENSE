@@ -1,0 +1,169 @@
+MIT License
+
+Copyright (c) 2026 Muhammad Daud
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+PROJECT INFORMATION
+================================================================================
+
+Project Name: MedEye v2.0
+Subtitle: Medical Eye Disease Detection System
+
+Description:
+MedEye is a comprehensive deep learning and machine learning framework for 
+automated detection and classification of eye diseases using medical retinal 
+images. The system leverages state-of-the-art transfer learning models and 
+traditional machine learning approaches to achieve high accuracy in clinical 
+diagnostics.
+
+Developer: Muhammad Daud
+Created: 2026
+Version: 2.0
+License Type: MIT Open Source
+
+================================================================================
+
+KEY FEATURES
+================================================================================
+
+✓ Multiple Transfer Learning Models (EfficientNet, MobileNet, ResNet, etc.)
+✓ Traditional Machine Learning Support (SVM, Random Forest)
+✓ Comprehensive Data Validation and Preprocessing
+✓ Production-Ready Error Handling and Logging
+✓ Model Serialization and Deployment Support
+✓ Extensive Testing Framework
+✓ Detailed Documentation and API References
+
+================================================================================
+
+SUPPORTED MODELS
+================================================================================
+
+Transfer Learning Models:
+- EfficientNetB3
+- MobileNetV2
+- DenseNet121
+- ResNet50
+- VGG16
+- Xception
+- InceptionV3
+
+Traditional ML Models:
+- Support Vector Machine (SVM)
+- Random Forest Classifier
+- Baseline Convolutional Neural Network
+
+================================================================================
+
+SUPPORTED DISEASES
+================================================================================
+
+The system is trained to detect and classify the following eye conditions:
+
+1. Cataract - Clouding of the eye lens
+2. Diabetic Retinopathy - Diabetes-related retinal damage
+3. Glaucoma - Elevated intraocular pressure condition
+4. Normal - Healthy retina (control class)
+
+================================================================================
+
+USAGE AND ATTRIBUTION
+================================================================================
+
+When using MedEye in academic, commercial, or research contexts, please:
+
+1. Include this license notice with your distribution
+2. Provide attribution to the original author
+3. Include a link to the original repository
+4. Note any modifications made to the software
+
+Example Attribution:
+"This project uses MedEye, a medical eye disease detection system by Muhammad Daud,
+licensed under the MIT License. Original repository: [github-url]"
+
+================================================================================
+
+DISCLAIMER FOR MEDICAL USE
+================================================================================
+
+IMPORTANT NOTICE FOR MEDICAL AND CLINICAL APPLICATIONS:
+
+This software is provided for research, development, and educational purposes.
+While the system is designed with medical applications in mind:
+
+1. This software is NOT approved for direct clinical diagnosis
+2. Always consult qualified medical professionals for medical advice
+3. Use only as a supplementary tool under medical supervision
+4. Ensure compliance with local healthcare regulations and HIPAA standards
+5. Obtain proper institutional review and approval for clinical use
+6. Maintain data privacy and patient confidentiality at all times
+
+The developers are not responsible for any medical decisions or outcomes 
+resulting from the use of this software.
+
+================================================================================
+
+LIMITATIONS
+================================================================================
+
+Users should be aware of the following limitations:
+
+- Model performance depends on image quality and resolution
+- System is trained on specific datasets; generalization may vary
+- Batch processing may be memory-intensive for large datasets
+- GPU availability recommended for optimal performance
+- Models should be regularly retrained with new data
+- No real-time inference guarantees
+
+================================================================================
+
+THIRD-PARTY DEPENDENCIES
+================================================================================
+
+This project relies on several excellent open-source libraries:
+
+- TensorFlow/Keras: Deep Learning Framework (Apache 2.0)
+- scikit-learn: Machine Learning Library (BSD 3-Clause)
+- OpenCV: Computer Vision Library (Apache 2.0)
+- pandas: Data Manipulation (BSD 3-Clause)
+- NumPy: Numerical Computing (BSD 3-Clause)
+- Matplotlib/Seaborn: Data Visualization (BSD)
+
+Please refer to requirements.txt for complete dependency information and 
+individual license terms.
+
+================================================================================
+
+WARRANTY AND LIABILITY
+================================================================================
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.
+
+Users assume full responsibility and risk for the use of this software.
+
+================================================================================
+
+For more information, visit the project repository and documentation.
+Last Updated: 2026
+
